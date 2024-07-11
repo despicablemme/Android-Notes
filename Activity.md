@@ -4,6 +4,8 @@
 ## 生命周期
 [Google](https://developer.android.com/guide/components/activities/activity-lifecycle?hl=zh-cn)
 
+运行---暂停---停止---销毁
+
 ## 任务栈
 activity创建后会保存在任务栈结构中，因此其内的activity先进后出；
 

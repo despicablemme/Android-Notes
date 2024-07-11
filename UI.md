@@ -233,3 +233,7 @@ LayoutManager用来管理item内的布局；提供操作item的过程动画；
 可以直接用ViewPager2，由RecyclerView实现，因此使用方法与其相同，传入一样的Adapter。个人理解其实就和RecyclerView换了一种特别的LayoutManager差不多。
 
 ## 自定义view
+
+
+## LayoutInflater.Inflate()
+[inflate方法](https://www.cnblogs.com/qinaidexin/p/11726296.html)
