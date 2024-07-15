@@ -233,7 +233,21 @@ LayoutManager用来管理item内的布局；提供操作item的过程动画；
 可以直接用ViewPager2，由RecyclerView实现，因此使用方法与其相同，传入一样的Adapter。个人理解其实就和RecyclerView换了一种特别的LayoutManager差不多。
 
 ## 自定义view
-
+可以通过继承已有的View来设计新的View,重写方法与控制，如重写onDraw方法，在绘制每一帧时自定义操作：
+```
+@Override
+    protected void onDraw(Canvas canvas) {
+        try{
+            ...
+        }catch (Exception e){e.printStackTrace();}
+        super.onDraw(canvas);
+    }
+```
 
 ## LayoutInflater.Inflate()
 [inflate方法](https://www.cnblogs.com/qinaidexin/p/11726296.html)
+
+## View的post与postDelayed方法
+与handler原理一样，给到UI线程来操作UI，当出现某些依赖，或比如前面的操作是异步执行的，
+需要用到post保障前面的先执行完。
+[举例](https://www.jianshu.com/p/b1d5e31e2011)
