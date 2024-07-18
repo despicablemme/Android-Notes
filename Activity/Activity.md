@@ -6,6 +6,13 @@
 
 运行---暂停---停止---销毁
 
+### eventlog 看生命周期
+```
+
+```
+
+## 前台与后台应用
+
 ## 任务栈
 activity创建后会保存在任务栈结构中，因此其内的activity先进后出；
 
@@ -76,6 +83,33 @@ activity创建后会保存在任务栈结构中，因此其内的activity先进�
 	       manager.moveTaskToFront(taskId, 0);
 	       break;
 	   }
+```
+任务栈信息：发现每次启动新的activity都会直接在栈顶自带一个请求权限的活动，请求完成后销毁；
+```
+getTasksInfo: ==============================
+ getTasksInfo: this taskStack's id is 561
+ getTasksInfo: the action of this taskStack's base intent is android.intent.action.MAIN
+ getTasksInfo: the categories of this tackStack's base intent is {android.intent.category.LAUNCHER}
+ getTasksInfo: the activity number of this taskStack is 2
+ getTasksInfo: the top activity of this taskStack is com.android.permissioncontroller.permission.ui.GrantPermissionsActivity
+ getTasksInfo: the base activity of this taskStack is com.example.myapplication.MainActivity
+getTasksInfo: this taskStack is/is not running: true
+getTasksInfo: ==============================
+getTasksInfo: this taskStack's id is 561
+getTasksInfo: the action of this taskStack's base intent is android.intent.action.MAIN
+getTasksInfo: the categories of this tackStack's base intent is {android.intent.category.LAUNCHER}
+getTasksInfo: the activity number of this taskStack is 1
+getTasksInfo: the top activity of this taskStack is com.example.myapplication.MainActivity
+getTasksInfo: the base activity of this taskStack is com.example.myapplication.MainActivity
+getTasksInfo: this taskStack is/is not running: true
+getTasksInfo: ==============================
+getTasksInfo: this taskStack's id is 561
+getTasksInfo: the action of this taskStack's base intent is android.intent.action.MAIN
+getTasksInfo: the categories of this tackStack's base intent is {android.intent.category.LAUNCHER}
+getTasksInfo: the activity number of this taskStack is 2
+getTasksInfo: the top activity of this taskStack is com.example.myapplication.GalleryChooseActivity
+getTasksInfo: the base activity of this taskStack is com.example.myapplication.MainActivity
+getTasksInfo: this taskStack is/is not running: true
 ```
 
 ## 四种启动模式

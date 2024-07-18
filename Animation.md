@@ -1,4 +1,6 @@
 # 动画
+[动画讲解大全](https://github.com/OCNYang/Android-Animation-Set/tree/master/transition-animation)
+
 ## 几个动画关键字
 - alpha：透明度；
 - translationX(Y):移动；
@@ -176,3 +178,5 @@ animator.start();
 ```
 
 ## Transition
+实现过场动画，如activity、fragment的动画切换；
+### xml实现
